@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.preprocessing import normalize
-from fuzzywuzzy import process  # Import fuzzy matching
+
 
 # Set device for running the model
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
