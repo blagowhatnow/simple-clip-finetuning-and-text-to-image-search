@@ -102,7 +102,7 @@ path_to_encoded_images = 'image_embeddings.npy'  # Path to the image embeddings 
 st.title("Hybrid Image Search using CLIP and BM25")
 
 # Text input for search query
-query = st.text_input("Enter a search query (e.g., 'aloo bhujia'):", value="", key="query")
+query = st.text_input("Enter a search query) :", value="", key="query")
 
 # Normalize the query on every input
 normalized_query = normalize_query(query)
