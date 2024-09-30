@@ -20,6 +20,8 @@ device = "cuda:0" if torch.cuda.is_available() else "cpu"
 model, preprocess = clip.load("ViT-B/16", device=device, jit=False)  # Must set jit=False for training
 # Load the model checkpoint (if needed)
 checkpoint = torch.load("model_checkpoint/model_epoch_4.pt")
+model.load_state_dict(checkpoint['model_state_dict'])
+
 
 # Preprocess images and encode them
 preprocessed_images = []
