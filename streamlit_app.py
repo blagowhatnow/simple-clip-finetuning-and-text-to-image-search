@@ -15,6 +15,8 @@ from fuzzywuzzy import process  # Import fuzzy matching
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 model, preprocess = clip.load("ViT-B/16", device=device, jit=False)
 checkpoint = torch.load("model_checkpoint/model_epoch_4.pt")
+model.load_state_dict(checkpoint['model_state_dict'])
+
 
 
 # Function to load data from a TSV file
