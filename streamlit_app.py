@@ -93,7 +93,7 @@ images_paths, labels = load_data_from_tsv(tsv_file_path)
 
 # Ensure to handle the case where no images are loaded
 if not images_paths:
-    st.warning("No JPG images found in the provided TSV file.")
+    st.warning("No valid images found in the provided TSV file.")
 
 # Set the path to the encoded images
 path_to_encoded_images = 'image_embeddings.npy'  # Path to the image embeddings .npy file
